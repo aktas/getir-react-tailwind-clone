@@ -1,0 +1,41 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+@layer base {
+    html, body {
+        font-family: 'Open Sans', sans-serif;
+        @apply antialiased bg-gray-50
+    }
+}
+
+.flag-select{
+    @apply !pb-0
+}
+
+.flag-select button{
+    @apply h-14 border-2 border-gray-200 transition-colors bg-white rounded hover:border-primary-brand-color
+}
+
+.flag-select button > span span:nth-child(2){
+    @apply text-sm pl-2
+}
+
+@keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+.loading {
+    @apply w-12 h-12 border-2 border-solid border-gray-300 rounded-full mx-auto my-auto;
+    border-top-color: #4c3398;
+    animation: spinner 0.6s linear infinite;
+}
+
+.ReactCollapse--collapse{
+    @apply transition-all
+}
